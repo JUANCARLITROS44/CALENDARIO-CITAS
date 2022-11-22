@@ -5,7 +5,7 @@ $contrasenadb = "";
 $dbname = "php_evento";
 	
 // Generar conexion con el servidor MySQl
-$conexion = mysqli_connect($hostname, $usuariodb, $contrasenadb, $dbname);
+$conexiona = mysqli_connect($hostname, $usuariodb, $contrasenadb, $dbname);
 
 
 	//conexion a la BD 
@@ -18,8 +18,8 @@ $conexion = mysqli_connect($hostname, $usuariodb, $contrasenadb, $dbname);
 	$dsn = "mysql:host=$host; dbname=$db; charset=utf8mb4";
 
 	try {
-		$conexiona = new PDO($dsn, $user, $pass);
-		$conexiona->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$conexion = new PDO($dsn, $user, $pass);
+		$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (PDOException $exc) {
 		$mensajeExc = $exc->getMessage();
 		$error = true;
